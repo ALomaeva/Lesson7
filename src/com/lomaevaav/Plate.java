@@ -5,10 +5,17 @@ public class Plate {
     public Plate(int food) {
         this.food = food;
     }
-    public void decreaseFood(int n) {
-        food -= n;
+    public boolean decreaseFood(int n) {
+        if (food >= n) {
+            food -= n;
+            return true;
+        }
+        else return false;
     }
     public void info() {
         System.out.println("plate: " + food);
+    }
+    public void increaseFood(int n){
+        food += n;
     }
 }
